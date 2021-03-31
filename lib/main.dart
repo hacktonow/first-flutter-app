@@ -11,8 +11,14 @@ void main() {
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.greenAccent,
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Best App"),
+      ),
+      body: Container(
+          child: Center(
+        child: Text("Hi Majhool"),
+      )),
     );
   }
 }
