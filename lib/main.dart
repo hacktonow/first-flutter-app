@@ -12,33 +12,46 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text("Best App"),
-        ),
-        body: Center(
+      appBar: AppBar(
+        title: Text("Best App"),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Center(
+          child: Align(
+            alignment: Alignment.bottomCenter,
             child: Container(
-                padding: EdgeInsets.all(8),
-                alignment: Alignment.center,
-                width: 100,
-                height: 100,
-                decoration: BoxDecoration(
-                  color: Colors.teal,
-                  gradient: LinearGradient(colors: [
-                    Colors.red,
-                    Colors.yellow,
-                  ]),
-                  borderRadius: BorderRadius.circular(5),
-                  boxShadow: [
-                    BoxShadow(
-                        color: Colors.grey[400],
-                        blurRadius: 5,
-                        offset: Offset(2.0, .0))
-                  ],
-                ),
-                child: Text("I Am A Box",
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                    )))));
+              color: Colors.black,
+              width: 200,
+              height: 400,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Container(
+                    padding: const EdgeInsets.all(8),
+                    color: Colors.green,
+                    width: 100,
+                    height: 100,
+                  ),
+                  Container(
+                    padding: const EdgeInsets.all(8),
+                    color: Colors.yellow,
+                    width: 100,
+                    height: 100,
+                  ),
+                  Container(
+                    padding: const EdgeInsets.all(8),
+                    color: Colors.red,
+                    width: 100,
+                    height: 100,
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
   }
 }
